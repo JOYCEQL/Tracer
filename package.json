@@ -1,0 +1,47 @@
+{
+  "name": "tracer-ts",
+  "version": "1.0.0",
+  "keywords": [],
+  "private": false,
+  "main": "lib/Tracer.es.js",
+  "author": "JOYCE",
+  "scripts": {
+    "dev": "vite --config ./build/base.config.ts --host",
+    "build": "vue-tsc --noEmit && vite build",
+    "build:all": " pnpm build:doc && pnpm build:lib && pnpm build:themes",
+    "build:doc": " vite build --config ./build/doc.config.ts",
+    "build:lib": "vite build --config ./build/lib.config.ts",
+    "build:themes": "gulp -f ./build/gulpfile.js",
+    "unit": "jest"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "prismjs": "^1.26.0",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.16",
+    "@vitejs/plugin-vue": "^2.0.0",
+    "@vue/test-utils": "^2.0.0-rc.17",
+    "@vue/vue3-jest": "^27.0.0-alpha.4",
+    "babel-jest": "^27.5.1",
+    "gulp": "^4.0.2",
+    "gulp-less": "^5.0.0",
+    "gulp-postcss": "^9.0.1",
+    "jest": "^27.5.1",
+    "less": "^4.1.2",
+    "postcss": "^8.4.6",
+    "rollup-plugin-copy": "^3.4.0",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vite-plugin-md": "^0.11.8",
+    "vue-tsc": "^0.29.8"
+  },
+  "license": "ISC"
+}

@@ -1,0 +1,271 @@
+@h-default: 40px;
+@h-small: 32px;
+@h-large: 48px;
+@white: #fff;
+@default-color: #333;
+@primary-color: #41b883;
+@info-color: #4098fc;
+@success-color: #85ce61;
+@warning-color: #f0a020;
+@error-color: #d03050;
+@grey: grey;
+@default-border-color: #d9d9d9;
+@radius: 3px;
+@green: #18a058;
+
+.t-button {
+    display: flex;
+    padding: 10px;
+    color: @default-color;
+    outline: none;
+    height: @h-default;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+ 
+    // type
+    &.t-type-default {
+        &:hover {
+          color: @green;
+          border-color: @green;
+        }
+        &:active {
+          color: darken(@default-color, 20%);
+          border-color: darken(@default-color, 20%);
+        }
+        &.is-disabled {
+          cursor: not-allowed;
+          background: lighten(@default-color, 20%);
+          border-color: lighten(@default-color, 20%);
+          &:hover {
+            color:@default-color;
+            background: lighten(@default-color, 20%);
+            border-color: lighten(@default-color, 20%);
+          }
+        }
+        &.is-dashed {
+          border-style: dashed;
+        }
+        > .jw-loadingIndicator {
+          border-style: dashed;
+          border-color: @default-color @default-color @default-color transparent;
+        }
+    }
+    &.t-type-primary {
+        background-color: @primary-color;
+        border-color: @primary-color;
+        color: @white;
+        &:hover {
+            background: lighten(@primary-color, 20%);
+            border-color: lighten(@primary-color, 20%);
+        }
+        &:active {
+            background-color: darken(@primary-color, 20%);
+            border-color: darken(@primary-color, 20%);
+        }
+
+        &.is-disabled {
+            cursor: not-allowed;
+            background: lighten(@primary-color, 20%);
+            border-color: lighten(@primary-color, 20%);
+            &:hover {
+              background: lighten(@primary-color, 20%);
+              border-color: lighten(@primary-color, 20%);
+            }
+        }
+
+    &.is-dashed {
+        border-style: dashed;
+        background-color: @white !important;
+        color: @primary-color;
+
+        > .jw-loadingIndicator {
+        border-style: dashed;
+        border-color: @primary-color @primary-color @primary-color transparent;
+        }
+    }
+    }
+    
+    &.t-type-info {
+        background-color: @info-color;
+        border-color: @info-color;
+        color: @white;
+        &:hover {
+          background: lighten(@info-color, 10%);
+          border-color: lighten(@info-color, 10%);
+        }
+        &:active {
+          background-color: darken(@info-color, 20%);
+          border-color: darken(@info-color, 20%);
+        }
+    
+        &.is-disabled {
+          cursor: not-allowed;
+          background: lighten(@info-color, 20%);
+          border-color: lighten(@info-color, 20%);
+          &:hover {
+            background: lighten(@info-color, 20%);
+            border-color: lighten(@info-color, 20%);
+          }
+        }
+    
+        &.is-dashed {
+          border-style: dashed;
+          background-color: @white !important;
+          color: @info-color;
+    
+          > .jw-loadingIndicator {
+            border-style: dashed;
+            border-color: @info-color @info-color @info-color transparent;
+          }
+        }
+    }
+    
+    &.t-type-success {
+        background-color: @success-color;
+        border-color: @success-color;
+        color: @white;
+        &:hover {
+          background: lighten(@success-color, 20%);
+          border-color: lighten(@success-color, 20%);
+        }
+        &:active {
+          background-color: darken(@success-color, 20%);
+          border-color: darken(@success-color, 20%);
+        }
+    
+        &.is-disabled {
+          cursor: not-allowed;
+          background: lighten(@success-color, 20%);
+          border-color: lighten(@success-color, 20%);
+          &:hover {
+            background: lighten(@success-color, 20%);
+            border-color: lighten(@success-color, 20%);
+          }
+        }
+    
+        &.is-dashed {
+          border-style: dashed;
+          background-color: @white !important;
+          color: @success-color;
+    
+          > .jw-loadingIndicator {
+            border-style: dashed;
+            border-color: @success-color @success-color @success-color transparent;
+          }
+        }
+    }
+    
+    &.t-type-warning {
+        background-color: @warning-color;
+        border-color: @warning-color;
+        color: @white;
+        &:hover {
+          background: lighten(@warning-color, 20%);
+          border-color: lighten(@warning-color, 20%);
+        }
+        &:active {
+          background-color: darken(@warning-color, 20%);
+          border-color: darken(@warning-color, 20%);
+        }
+    
+    &.is-disabled {
+          cursor: not-allowed;
+          background: lighten(@warning-color, 20%);
+          border-color: lighten(@warning-color, 20%);
+          &:hover {
+            background: lighten(@warning-color, 20%);
+            border-color: lighten(@warning-color, 20%);
+          }
+        }
+    
+    &.is-dashed {
+          border-style: dashed;
+          background-color: @white !important;
+          color: @warning-color;
+    
+          > .jw-loadingIndicator {
+            border-style: dashed;
+            border-color: @warning-color @warning-color @warning-color transparent;
+          }
+        }
+    }
+    
+    &.t-type-error {
+        background-color: @error-color;
+        border-color: @error-color;
+        color: @white;
+        &:hover {
+          background: lighten(@error-color, 20%);
+          border-color: lighten(@error-color, 20%);
+        }
+        &:active {
+          background-color: darken(@error-color, 20%);
+          border-color: darken(@error-color, 20%);
+        }
+    
+        &.is-disabled {
+          cursor: not-allowed;
+          background: lighten(@error-color, 20%);
+          border-color: lighten(@error-color, 20%);
+          &:hover {
+            background: lighten(@error-color, 20%);
+            border-color: lighten(@error-color, 20%);
+          }
+        }
+    
+        &.is-dashed {
+          border-style: dashed;
+          background-color: @white !important;
+          color: @error-color;
+    
+          > .jw-loadingIndicator {
+            border-style: dashed;
+            border-color: @error-color @error-color @error-color transparent;
+          }
+        }
+    }
+
+    // circle
+    &.is-circle.t-button-default {
+        border-radius: 100%;
+        height: @h-default;
+        width: @h-default;
+    }
+    &.is-circle.t-button-small {
+        border-radius: 100%;
+        height: @h-small;
+        width: @h-small;
+    }
+    &.is-circle.t-button-large {
+        border-radius: 100%;
+        height: @h-large;
+        width: @h-large;
+    }
+    // round
+    &.is-round.t-button-default {
+        border-radius: calc(@h-default / 2);
+    }
+    &.is-round.t-button-large {
+        border-radius: calc(@h-large / 2);
+    }
+    &.is-round.t-button-small {
+        border-radius: calc(@h-small / 2);
+    }
+
+    // size;
+    &.t-button-large {
+        font-size: 24px;
+        height: @h-large;
+        padding: 0 16px;
+    }
+    &.t-button-small {
+        font-size: 12px;
+        height: @h-small;
+        padding: 0 8px;
+    }
+}
