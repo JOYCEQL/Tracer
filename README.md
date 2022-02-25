@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="joyceql.github.io/web-doc" target="_blank" rel="noopener noreferrer">
+  <a href="https://joyceql.github.io/Tracer-doc" target="_blank" rel="noopener noreferrer">
     <img width="180" src="src/assets/images/logo.png" alt="Tracer logo">
   </a>
 </p>
