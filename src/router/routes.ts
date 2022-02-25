@@ -1,10 +1,12 @@
 
 
+
 import Introduce from '@/docs/introduce.md'
 import Install from '@/docs/install.md'
 import Use from '@/docs/use.md'
 import Button from '/packages/Button/docs/zh-CN.md'
 import Switch from '/packages/Switch/docs/zh-CN.md'
+import Dialog from '/packages/Dialog/docs/zh-CN.md'
 
 export default {
     文档: [
@@ -64,6 +66,17 @@ export default {
                 "compClassName": "switch",
             },
             component: Switch,
-        }
+        },
+        {
+
+            title: '对话框',
+            name: 'dialog',
+            path: '/components/dialog',
+            meta: {
+                "compZhName": "开关",
+                "compClassName": "dialog",
+            },
+            component: Dialog,
+        },
     ],
 };

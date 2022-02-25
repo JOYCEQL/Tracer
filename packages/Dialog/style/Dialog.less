@@ -1,0 +1,81 @@
+
+  .dialog {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 998;
+    background-color: #00000080;
+    &.dialog-fade-enter-active {
+      animation: dialog-fadein .3s;
+  
+    }
+    &.dialog-fade-leave-active {
+      animation: dialog-fadeout .3s;
+    }
+    .dialog-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+      width: 446px;
+      padding: 10px;
+      background: white;
+      .dialog-content {
+        border-radius: 13px;
+        background: #fff;
+        p{
+          color: #000;
+        }
+      }
+      .dialog-footer{
+        display: flex;
+        justify-content: flex-end;
+        .dialog-btn-cancel{
+          margin-right: 10px;
+        }
+      }
+
+    }
+  }
+
+  @keyframes dialog-fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes dialog-fadeout {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes dialog-zoom-in {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes dialog-zoom-out {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
