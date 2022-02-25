@@ -6,7 +6,7 @@
       <h3   class="preview-toolbar_desc">{{moduleName}}</h3>
       <span class="preview-toolbar_btn" >
       <span >复制代码</span>
-      <span @click="showSourceCode">查看代码</span>  
+      <span @click="showSourceCode">查看代码</span>
       </span>
     </div>
     <section>
@@ -62,7 +62,7 @@ export default {
         ).default;
       } else {
         // packages前加上仓库名，解决404
-        this.sourceCode = await fetch(`/web-doc/packages/${this.compName}/example/${this.demoName}.vue`).then((res) => res.text());
+        this.sourceCode = await fetch(`/Tracer-doc/packages/${this.compName}/example/${this.demoName}.vue`).then((res) => res.text());
       }
     }
     await this.$nextTick();
@@ -117,7 +117,7 @@ pre {
   user-select: none;
   .preview-toolbar_desc{
     color: var(--doc-color-text);
-    
+
   }
   .preview-toolbar_btn{
     color: var(--doc-color-primary);
