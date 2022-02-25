@@ -1,10 +1,4 @@
-<!--
- * @Author: yuguangzhou
- * @Date: 2022-01-19 13:42:55
- * @LastEditTime: 2022-01-30 10:01:08
- * @LastEditors: yuguangzhou
- * @Description: 
--->
+
 <template>
   <button class="t-button" @click="$emit('click', $event)" :style="style" :class="classes">
     <slot></slot>
@@ -13,11 +7,11 @@
 
 <script >
 import { defineComponent,computed } from 'vue'
-export default defineComponent({ 
+export default defineComponent({
   name: 'TButton',
   props: {
     color: {
-      type: String 
+      type: String
     },
     round: {
       type: Boolean,
@@ -58,8 +52,7 @@ export default defineComponent({
         background: color,
       },
       classes
-      // 封装类名
-      
+
     }
   }
 })
