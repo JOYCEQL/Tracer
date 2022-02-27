@@ -1,10 +1,5 @@
-/*
- * @Author: yuguangzhou
- * @Date: 2022-01-20 10:43:44
- * @LastEditTime: 2022-02-09 15:06:16
- * @LastEditors: Please set LastEditors
- * @Description: 
- */
+
+
 export default {
   title: 'Tracer UI',
   themes: {

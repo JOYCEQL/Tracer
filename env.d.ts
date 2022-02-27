@@ -1,6 +1,5 @@
 
 
-
 declare module '*.vue' {
   import { DefineComponent } from 'vue'
   const component: DefineComponent<{}, {}, any>
@@ -16,3 +15,5 @@ declare module '*.md' {
 declare interface Window {
   Vue: any
 }
+
+declare module 'prismjs'

@@ -16,7 +16,8 @@
     ],
     "types": [
       "node",
-      "jest"
+      "jest",
+      "loadsh-es"
     ],
   },
   "include": [

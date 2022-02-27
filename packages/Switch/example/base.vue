@@ -1,9 +1,10 @@
 
+
 <template>
     <t-switch v-model="checked" @change="handleChange"></t-switch>
     <t-switch disabled></t-switch>
 </template>
-<script>
+<script lang="ts">
 import {ref } from 'vue';
 export default {
    name:'Base',
@@ -11,13 +12,10 @@ export default {
     const checked = ref(false); 
     const handleChange = (val) => {
     };
-     return {
-       checked,
-       handleChange
-     } 
+    return {
+      checked,
+      handleChange
+    } 
    }
 }
 </script>
-<style scoped>
-
-</style>

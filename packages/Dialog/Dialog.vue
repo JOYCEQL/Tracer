@@ -1,9 +1,10 @@
 
+
 <template>
   <teleport to="body">
     <transition name="dialog-fade">
       <div class="dialog" v-if="modelValue" @click="maskChange">
-        <div class="dialog-wrapper">
+        <div class="dialog-wrapper" @click.stop>
           <header>
             <slot name="title">{{ title }}</slot>
           </header>
@@ -46,18 +47,20 @@ export default defineComponent({
     },
     closeOnClickMask: {
       type: Boolean,
-      default: false
+      default: true
     },
    
     
   },
-  emits: ["update:modelValue"],
+  emits: ["update:modelValue", "confirm","cancel"],
   setup(props,{emit}) {
     const cancel = ()=> {
        emit("update:modelValue", false);
+       emit("cancel");
     }
     const confirm=()=>{
        emit("update:modelValue", false);
+       emit("confirm");
     }
     const maskChange=()=>{
       if(props.closeOnClickMask){

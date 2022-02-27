@@ -1,10 +1,4 @@
-<!--
- * @Author: yuguangzhou
- * @Date: 2022-01-20 14:00:39
- * @LastEditTime: 2022-02-09 15:03:28
- * @LastEditors: Please set LastEditors
- * @Description: 
--->
+
 <template>
  <div class="tracer-doc-side">
     <div class="menu">

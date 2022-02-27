@@ -1,10 +1,3 @@
-<!--
- * @Author: yuguangzhou
- * @Date: 2022-01-19 11:29:41
- * @LastEditTime: 2022-02-09 15:06:46
- * @LastEditors: Please set LastEditors
- * @Description: 
--->
 
 <template>
   <div class="tracer-doc">
@@ -23,13 +16,13 @@
   </div>
 </template>
 
-<script  >
+<script  lang="ts">
 import AppHeader from '@/components/AppHeader.vue';
 import AppSideBar from '@/components/AppSideBar.vue';
 import { reactive,defineComponent,onMounted,ref,computed, getCurrentInstance, nextTick } from 'vue'
 import config from '@/config'
-import { setThemes,getBrowserThemes } from './utils/setTheme';
-import { setItem } from '@/utils/storage'
+import { setThemes,getBrowserThemes } from './utils/setTheme'
+import { setItem } from './utils/storage'
 
 export default defineComponent({
   name: 'TracerDoc',
@@ -37,7 +30,7 @@ export default defineComponent({
     AppSideBar,
     AppHeader
   },
-  setup({props}) {
+  setup() {
     const currentThemes =ref(getBrowserThemes()) 
     const asideVisible = ref(true)
     onMounted( async () => {

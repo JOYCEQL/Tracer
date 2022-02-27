@@ -15,7 +15,7 @@
  </div>
 </template>
 
-<script>
+<script lang="ts">
 import Preview from '@/components/Preview.vue'
 import BaseUse from './base.vue'
 import Size from './size.vue'
@@ -27,10 +27,6 @@ export default {
     Size,
     Color
   },
-  setup(){
-
-  }
-
  }
 
 </script>
